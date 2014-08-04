@@ -28,24 +28,24 @@
 			document.getElementById('ycoord').value = y;
 		}
 		
-		
-	      $( document ).ready(function(){
-	      $('button').click(function(){
-	      alert("button");
+	      function getClicked(amClicked){
+		     //alert("button");
+	      if (amClicked) {
+		     $( document ).ready(function(){
 	      if ($('body').hasClass('bg1')) {
 		     $('body').removeClass('bg1').addClass('bg2');
 	       } else {
 		     $('body').removeClass('bg2').addClass('bg1');
 	       }       
-		
-	      });
-	      
-	      });
+	     
+		      });
+	      }
+	      }
 	      
 	</script>
 	</head>
 	
-     <body class=bg1>
+     <body class="bg1">
 	<h1>Seeing Javascript</h1>
 	<p>Binding the JavaScript to Processing: <br/>Then pointing to a JavaScript from the Processing function with "JavaScript.showXY and the "Processing.getInstanceById(id)" instance.</p>
 	<canvas id="sketchID" data-processing-sources="Seeing_Processing.pde"></canvas>

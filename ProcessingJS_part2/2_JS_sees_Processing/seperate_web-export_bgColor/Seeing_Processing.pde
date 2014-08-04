@@ -1,6 +1,7 @@
 // telling processing to look for Javascript
 interface JavaScript {
   void showXY(int x, int y);
+  void getClicked(Boolean amClicked);
 }
 
 // binding the javascript to the name
@@ -11,6 +12,7 @@ void bindJavaScript(JavaScript js){
 // naming the javascript
 JavaScript javascript;
 
+Boolean mouseC = false;
 
 void setup(){
   size(500,500);
@@ -26,7 +28,16 @@ void draw(){
  
 }
 
-void mouseMoved() {
+void mouseClicked(){
+  mouseC = true;
+   // these are really important in case we run an error
+  if(javascript!= null){
+  javascript.getClicked(mouseC); 
+  }
+
+}
+
+void mouseMoved(){
   rectMode(CENTER);
   stroke(255);
   strokeWeight(2);
@@ -35,7 +46,7 @@ void mouseMoved() {
   
   // these are really important in case we run an error
   if(javascript!= null){
-  javascript.showXY(mouseX, mouseY);
+  javascript.showXY(mouseX, mouseY); 
   }
 }
 
