@@ -1,0 +1,80 @@
+bobody, html {
+    background-color: black;
+}
+
+#radiobox {
+    height: 300px;
+    width: 540px;
+    background: url("Media/old-radio.jpg") no-repeat; /* Old browsers */
+    background-size: 100%;
+    margin: 100px auto;
+    border:10px solid #432106;
+    border-radius: 5px;
+}
+
+#controlbox {
+    height: 80px;
+    background-color: #140a00;
+    margin-top: 100px;
+    border-radius: 5px;
+    border: 3px solid #432106;
+    box-shadow: 3px 3px 1px #081702;
+}
+
+#leftknob {
+    height:100px;
+    width:100px;
+    background-color: #b79e5b;
+    border-radius:100%;
+    border: 3px solid #b7aea9;
+    margin-top: 100px;
+    margin-left: 45px;
+    margin-right: 5px;
+    box-shadow: 3px 3px 1px #081702;
+}
+
+
+#leftknob:hover {
+    background-color: #956815;
+   cursor: pointer;
+}
+
+#leftknob:active {
+    background-color: white;
+   
+}
+#rightknob {
+    height:100px;
+    width:100px;
+    background-color: #b79e5b;
+    margin: 100px 30px 0px 30px;
+    border-radius:100%;
+    border:  3px solid #b7aea9;
+    box-shadow: 3px 3px 1px #081702;
+}
+
+#rightknob:hover {
+    background-color: #956815;
+   cursor: pointer;
+}
+
+#rightknob:active {
+    background-color: white;
+}
+
+#instrument {
+    height: 116px;
+    width: 812px;
+    padding-right: 10px;
+    padding-top: 50px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+p {
+   color: #c1d37d;
+   font-family:monospace;
+   margin-left: 10px;
+    
+}
