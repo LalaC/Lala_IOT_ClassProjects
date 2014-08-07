@@ -50,12 +50,24 @@
 		<script src="processing.js" type="text/javascript"></script>
 		<script type="text/javascript">
 // convenience function to get the id attribute of generated sketch html element
-function getProcessingSketchId () { return 'PjsExercise'; }
-
+   var bound = false;
+	     
+	      function bindJavaScript(){
+		     var mySketch = Processing.getInstanceById('sketchID');
+		     if (mySketch != null) { 
+			    mySketch.bindJavaScript(this);
+			    bound = true;    
+		     }
+		     if (!bound) {
+			    setTimeout(bindJavaScript, 250);
+		     }
+	      }
+	      // run the function
+	      bindJavaScript();
    
      function getClicked(amClicked){
-		console.log("button");
-	      if (amClicked) {
+		alert("amClicked");
+	      /*if (amClicked) {
 		     $( document ).ready(function(){
 	      if ($('body').hasClass('bg1')) {
 		     $('body').removeClass('bg1').addClass('bg2');
@@ -64,7 +76,7 @@ function getProcessingSketchId () { return 'PjsExercise'; }
 	       }       
 	     
 		      });
-	      }
+	      }*/
 	      }
 	      
 </script>
@@ -84,7 +96,6 @@ function getProcessingSketchId () { return 'PjsExercise'; }
 	    	</div>
     		<p id="description"></p>
 			<p>Processing.js exercise: Lala Crafford, Week 2 </p>
-			<div><button>Change Background</button></div>
 		
 		</div>
 		

@@ -1,5 +1,5 @@
 interface JavaScript {
-  void showXY(int x, int y);
+  //void showXY(int x, int y);
   void getClicked(Boolean amClicked);
 }
 
@@ -88,16 +88,18 @@ void draw() {
 void mouseDragged(){
   
   cirlceStroke = 100;
-  println("2: "+cirlceStroke);
+  //println("2: "+cirlceStroke);
   backgroundColor = map(mouseX, 0, 600, 0, 255);
    
+    if(javascript!= null){
+  javascript.getClicked(mouseC); 
+  }
 }
 
 void mouseClicked(){
   mouseC = true;
    // these are really important in case we run an error
-  if(javascript!= null){
-  javascript.getClicked(mouseC); 
-  }
+ 
+  
 
 }
